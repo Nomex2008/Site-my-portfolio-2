@@ -192,3 +192,40 @@ body,html{
 
     padding: 2% 0 5% 5%;
 }
+
+/*footer*/
+
+.footer {
+    background-color: #171718;
+    padding: 64px 0 50px 0;
+}
+.social {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+.social__item{
+    font-size: 36px;
+}
+.social__item  a i{
+    color: #ffffff;
+    transition: all .3s ease;
+}
+.social__item:hover  a i{
+    color: #6e6d6d;
+}
+.footer__text {
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.5px;
+
+    padding-top: 30px;
+}
