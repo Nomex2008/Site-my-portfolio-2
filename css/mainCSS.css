@@ -407,13 +407,13 @@ body.dark .nav{
 body.dark .nav-list__link {
     color: #e4e2e2;
 }
-.nav-list__link::after{
+body.dark .nav-list__link::after{
     background-color: #5C62EC;
 }
-.nav-list__link:hover:after{
+body.dark .nav-list__link:hover:after{
     background-color: #262bca;
 }
-.nav-list__link:hover{
+body.dark .nav-list__link:hover{
     color: #262bca;
 }
 body.dark .nav-list__link.active{
@@ -519,6 +519,10 @@ body.dark .content__list-item p{
     .projects__item {
         width: 48%;
     }
+    body.dark .projects__item {
+        width: 48%;
+    }
+
     .projects__item:hover{
         opacity: 0.5;
     }
@@ -542,6 +546,9 @@ body.dark .content__list-item p{
     }
     .section__title {
         font-size: 40px;
+    }
+    body.dark .projects__item {
+        width: 100%;
     }
     .projects__item {
         width: 100%;
