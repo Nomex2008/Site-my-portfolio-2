@@ -51,7 +51,9 @@ body,html{
 }
 .nav-list {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 20px;
 
     align-items: center;
 }
@@ -71,11 +73,23 @@ body,html{
     flex-shrink: 0;
 
     background-color: #5C62EC;
+
+    transition: all .3s ease;
+}
+.nav-list__link:hover:after{
+    width: 100%; 
+    background-color: #262bca;
+}
+.nav-list__link:hover{
+    color: #262bca;
 }
 .nav-list__link.active::after{
     width: 100%;
 }
 .nav-list__link.active{
+    color: #5C62EC;
+}
+.nav-list__link.active:hover{
     color: #5C62EC;
 }
 /*header*/
@@ -134,6 +148,12 @@ body,html{
     padding: 12px 28px;
     background-color: #5C62EC;
     display: inline-block;
+
+    transition: all .3s ease;
+}
+.header__btn:hover {
+    background-color: #a34cdd;
+    box-shadow: 0 0 10px #a34cdd;
 }
 
 /*section*/
@@ -192,7 +212,102 @@ body,html{
 
     padding: 2% 0 5% 5%;
 }
+/*project-ditails*/
+.project-ditails {
+    margin: 0 auto;
+    max-width: 865px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+.project-ditails__img {
+    max-width: 100%;
+    height: auto;
+
+    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin-bottom: 40px;
+}
+.project-ditails-desc {
+    color: #171718;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 31.2px */
+    letter-spacing: -0.5px;
+
+    max-width: 480px;
+
+    margin-bottom: 30px;
+}
+.project-ditails-learmMore {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    padding: 12px 20px;
+
+    transition: all .3s ease;
+}
+.project-ditails-learmMore:hover{
+    opacity: .7;
+    box-shadow: 0 0 5px gray;
+}
+.project-ditails-learmMore i{
+    color: #000;
+    font-size: 26px;
+    padding-right: 8px;
+}
+.project-ditails-text {
+    color: #000;
+    text-align: center;
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+}
+/*content*/
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+.content__list {
+    max-width: 571px;
+    margin: 0 auto;
+}
+.section__title-2 {
+    color: #171718;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: -0.5px;
+}
+.content__list-item p{
+    color: #171718;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    letter-spacing: -0.5px;
+}
+.footer.skills{
+    margin-top: auto;
+}
 /*footer*/
 
 .footer {
@@ -228,4 +343,149 @@ body,html{
     letter-spacing: -0.5px;
 
     padding-top: 30px;
+}
+
+
+/*media*/
+
+@media(max-width:800px){
+    /*header*/
+
+    .header {
+        padding: 30px 0;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+    .header__title strong{
+        font-size: 50px;
+    }
+    .header__title span{
+        font-size: 50px;
+    }
+    .header__btn {
+        font-size: 14px;
+
+        padding: 10px 24px;
+    }
+    /*section*/
+
+    .section {
+        padding: 60px 0;
+    }
+    .section__title {
+        font-size: 50px;
+        }
+    .projects__item {
+        width: 48%;
+    }
+    .projects__item:hover{
+        opacity: 0.5;
+    }
+    .prokects__name {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:480px){
+    /*header*/
+    .header__title strong{
+        font-size: 45px;
+    }
+    .header__title span{
+        font-size: 45px;
+    }
+    /*section*/
+
+    .section {
+        padding: 55px 0;
+    }
+    .section__title {
+        font-size: 40px;
+    }
+    .projects__item {
+        width: 100%;
+    }
+    /*project-ditails*/
+    .project-ditails {
+        margin-bottom: 30px;
+    }
+    .project-ditails__img {
+        margin-bottom: 30px;
+    }
+    .project-ditails-desc {
+        font-size: 20px;
+    }
+    .project-ditails-learmMore {
+        padding: 10px 18px;
+    }
+    .project-ditails-learmMore i{
+        font-size: 22px;
+    }
+    .project-ditails-text {
+        font-size: 18px;
+    }
+    /*content*/
+    .section__title-2 {
+        font-size: 30px;
+    }
+    .content__list-item p{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:360px){
+    /*header*/
+    .header__title strong{
+        font-size: 35px;
+    }
+    .header__title span{
+        font-size: 35px;
+    }
+    /*section*/
+
+    .section {
+        padding: 45px 0;
+    }
+    .section__title {
+        font-size: 32px;
+    }
+    /*project-ditails*/
+    .project-ditails-desc {
+        font-size: 18px;
+    }
+    .project-ditails-learmMore i{
+        font-size: 20px;
+    }
+    .project-ditails-text {
+        font-size: 16px;
+    }
+    /*content*/
+    .skills{
+        display: flex;
+        flex-direction: column;
+    }
+    .content__list {
+        max-width: 571px;
+        margin: 0 auto;
+    }
+    .section__title-2 {
+        font-size: 26px;
+    }
+    .content__list-item p{
+        font-size: 14px;
+    }
+    .footer.skills{
+        margin-top: auto;
+        padding: 34px 30px;
+    }
+}
+@media(max-height:680px){
+    .skills{
+        display: block;
+    }
+    .footer.skills{
+        margin-top: 0;
+        padding: 34px 30px;
+    }
 }
